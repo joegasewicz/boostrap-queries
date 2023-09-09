@@ -1,0 +1,23 @@
+{
+  "name": "boostrap-queries",
+  "version": "0.0.2",
+  "description": "Sass media query library based on Bootrap v5 breakpoints",
+  "main": "bootstrap-queries.scss",
+  "scripts": {
+    "docs": "sassdoc bootstrap-queries.scss -c conf.json",
+    "release": "npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/joegasewicz/bootstrap-queries"
+  },
+  "author": "joegasewicz",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.66.1",
+    "sassdoc": "^2.7.4"
+  },
+  "files": [
+    "bootstrap-queries.scss"
+  ]
+}

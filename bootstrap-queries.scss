@@ -1,0 +1,179 @@
+/**
+* ██████╗░░█████╗░░█████╗░████████╗░██████╗████████╗██████╗░░█████╗░██████╗░
+* ██╔══██╗██╔══██╗██╔══██╗╚══██╔══╝██╔════╝╚══██╔══╝██╔══██╗██╔══██╗██╔══██╗
+* ██████╦╝██║░░██║██║░░██║░░░██║░░░╚█████╗░░░░██║░░░██████╔╝███████║██████╔╝
+* ██╔══██╗██║░░██║██║░░██║░░░██║░░░░╚═══██╗░░░██║░░░██╔══██╗██╔══██║██╔═══╝░
+* ██████╦╝╚█████╔╝╚█████╔╝░░░██║░░░██████╔╝░░░██║░░░██║░░██║██║░░██║██║░░░░░
+* ╚═════╝░░╚════╝░░╚════╝░░░░╚═╝░░░╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░░░░
+*
+* ░██████╗░██╗░░░██╗███████╗██████╗░██╗███████╗░██████╗
+* ██╔═══██╗██║░░░██║██╔════╝██╔══██╗██║██╔════╝██╔════╝
+* ██║██╗██║██║░░░██║█████╗░░██████╔╝██║█████╗░░╚█████╗░
+* ╚██████╔╝██║░░░██║██╔══╝░░██╔══██╗██║██╔══╝░░░╚═══██╗
+* ░╚═██╔═╝░╚██████╔╝███████╗██║░░██║██║███████╗██████╔╝
+* ░░░╚═╝░░░░╚═════╝░╚══════╝╚═╝░░╚═╝╚═╝╚══════╝╚═════╝░
+*
+* Based on Bootrap v5 breakpoints.
+* See https://getbootstrap.com/docs/5.0/layout/breakpoints/#available-breakpoints
+*
+* Breakpoint	    Class infix	      Dimensions
+* ----------------------------------------------
+* X-Small	            None	      <576px
+* Small	                sm	          ≥576px
+* Medium	            md	          ≥768px
+* Large	                lg	          ≥992px
+* Extra large	        xl	          ≥1200px
+* Extra extra large	    xxl	          ≥1400px
+*
+*/
+$_x-small: 576;
+$_small: 576;
+$_medium: 768;
+$_large: 992;
+$_extra-large: 1200;
+$_extra-extra-large: 1400;
+
+/// Creates a media query finishing at <576px.
+/// @content The style rules to be called at a max screen width of $x-small.
+/// @group mixins
+/// @example
+///
+/// screen-x-small() {
+///   ...
+/// }
+///
+@mixin screen-x-small() {
+  @media (max-width: #{$_x-small}px) {
+    @content
+  }
+}
+
+/// Creates a media query starting at ≥576px
+/// @group mixins
+/// @example
+///
+/// screen-small() {
+///   ...
+/// }
+///
+@mixin screen-small() {
+  @media (min-width: #{$_small}px) {
+    @content
+  }
+}
+
+/// Creates a media query starting at ≥768px
+/// @group mixins
+/// @example
+///
+/// @include screen-medium() {
+///   ...
+/// }
+///
+@mixin screen-medium() {
+  @media screen and (min-width: #{$_medium}px) {
+    @content
+  }
+}
+
+/// Creates a media query starting at ≥992px
+/// @group mixins
+/// @example
+///
+/// @include screen-large() {
+///   ...
+/// }
+///
+@mixin screen-large() {
+  @media screen and (min-width: #{$_large}px) {
+    @content
+  }
+}
+
+/// Creates a media query starting at ≥1200px
+/// @group mixins
+/// @example
+///
+/// @include screen-extra-large() {
+///   ...
+/// }
+///
+@mixin screen-extra-large() {
+  @media (min-width: #{$_extra-large}px) {
+    @content
+  }
+}
+
+/// Creates a media query starting at ≥1400px
+/// @group mixins
+/// @example
+///
+/// @include screen-extra-extra-large() {
+///   ...
+/// }
+///
+@mixin screen-extra-extra-large() {
+  @media (min-width: #{$_extra-extra-large}px) {
+    @content
+  }
+}
+
+/// Get x-small dimension
+/// @group getters
+/// @example
+///
+/// $bootstrap-x-small: get-x-small();
+///
+@function get-x-small() {
+  @return $_x-small;
+}
+
+/// Get small dimension
+/// @group getters
+/// @example
+///
+/// $bootstrap-small: get-small();
+///
+@function get-small() {
+  @return $_small;
+}
+
+/// Get medium dimension
+/// @group getters
+/// @example
+///
+/// $bootstrap-medium: get-medium();
+///
+@function get-medium() {
+  @return $_medium;
+}
+
+/// Get large dimension
+/// @group getters
+/// @example
+///
+/// $bootstrap-large: get-large();
+///
+@function get-large() {
+  @return $_large;
+}
+
+/// Get extra-large dimension
+/// @group getters
+/// @example
+///
+/// $bootstrap-extra-large: get-extra-large();
+///
+@function get-extra-large() {
+  @return $_extra-large;
+}
+
+/// Get extra-extra-large dimension
+/// @group getters
+/// @example
+///
+/// $bootstrap-extra-extra-large: get-extra-extra-large()
+///
+@function get-extra-extra-large() {
+  @return $_extra-extra-large;
+}

@@ -1,0 +1,10 @@
+{
+  "dest": "docs",
+  "exclude": [],
+  "package": "package.json",
+  "theme": "default",
+  "autofill": 	["requires", "throws", "content"],
+  "no-update-notifier": false,
+  "verbose": false,
+  "strict": false
+}
