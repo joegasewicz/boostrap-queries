@@ -2,9 +2,9 @@
   "name": "boostrap-queries",
   "version": "0.1.0",
   "description": "Sass media query library based on Bootrap v5 breakpoints",
-  "main": "bootstrap-queries.scss",
+  "main": "index.scss",
   "scripts": {
-    "docs": "sassdoc bootstrap-queries.scss -c conf.json",
+    "docs": "sassdoc index.scss -c conf.json",
     "release": "npm publish"
   },
   "repository": {
@@ -18,6 +18,6 @@
     "sassdoc": "^2.7.4"
   },
   "files": [
-    "bootstrap-queries.scss"
+    "index.scss"
   ]
 }
