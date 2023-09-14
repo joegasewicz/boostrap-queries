@@ -90,6 +90,6 @@ $bootstrap-extra-extra-large: get-extra-extra-large();
 ### Utils
 
 Hide elements at any bootstrap v5 screen width
-```sass
+```scss
 @include hide-at-screen(get-small(), flex);
 ```
