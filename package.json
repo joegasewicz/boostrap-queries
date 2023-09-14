@@ -1,6 +1,6 @@
 {
   "name": "boostrap-queries",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Sass media query library based on Bootrap v5 breakpoints",
   "main": "index.scss",
   "scripts": {
