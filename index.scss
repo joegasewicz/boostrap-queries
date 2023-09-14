@@ -22,6 +22,9 @@ $_large: 992;
 $_extra-large: 1200;
 $_extra-extra-large: 1400;
 
+// internal
+$_hide-screen-small-default: 0;
+
 /// Creates a media query finishing at <576px.
 /// @content The style rules to be called at a max screen width of $x-small.
 /// @group mixins
@@ -165,4 +168,49 @@ $_extra-extra-large: 1400;
 ///
 @function get-extra-extra-large() {
   @return $_extra-extra-large;
+}
+
+/// Hide elements at any bootstrap v5 screen width
+/// @group utils
+/// @example
+///
+/// @include hide-at-screen(get-small(), flex);
+///
+@mixin hide-at-screen($screen-width: $_hide-screen-small-default, $display: block) {
+  @if $screen-width == $_hide-screen-small-default {
+    @include screen-x-small() {
+      display: $display;
+    }
+    display: none;
+  }
+  @if $screen-width == get-small() {
+    display: none;
+    @include screen-small() {
+      display: $display;
+    }
+  }
+  @if $screen-width == get-medium() {
+    display: none;
+    @include screen-medium() {
+      display: $display;
+    }
+  }
+  @if $screen-width == get-large() {
+    display: none;
+    @include screen-large() {
+      display: $display;
+    }
+  }
+  @if $screen-width == get-extra-large() {
+    display: none;
+    @include screen-extra-large() {
+      display: $display;
+    }
+  }
+  @if $screen-width == get-extra-extra-large() {
+    display: none;
+    @include screen-extra-extra-large() {
+      display: $display;
+    }
+  }
 }
