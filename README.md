@@ -84,7 +84,7 @@ $bootstrap-extra-large: get-extra-large();
 
 Get extra-extra-large dimension
 ```scss
-$bootstrap-extra-extra-large: get-extra-extra-large()
+$bootstrap-extra-extra-large: get-extra-extra-large();
 ```
 
 ### Utils
